@@ -1,0 +1,7 @@
+applications:
+- name: sfi
+  path: target/SecretsFileInjectorDemo-0.0.1-SNAPSHOT.jar
+  env:
+    SecretFilename: /home/vcap/secret.file
+  services:
+  - mysecretfile
