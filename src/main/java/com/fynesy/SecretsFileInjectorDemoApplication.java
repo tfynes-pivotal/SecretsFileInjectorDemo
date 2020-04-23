@@ -6,8 +6,10 @@ import java.io.FileReader;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
+@RestController
 public class SecretsFileInjectorDemoApplication {
 
 	public static void main(String[] args) {
@@ -15,7 +17,7 @@ public class SecretsFileInjectorDemoApplication {
 	}
 	
 	@RequestMapping("/")
-	public String index(String s) throws Exception {
+	public String index() throws Exception {
 		System.out.println("Secret File Printer Demo App");
 		
 //		Map<String,String> env = System.getenv();
